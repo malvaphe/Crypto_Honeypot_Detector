@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 // Web3js
 import Web3 from 'web3';
-import { priceImp, maxBuyFee, maxSellFee, ETHERaddress } from '../../config/const.js';
+import { priceImp, maxBuyFee, maxSellFee, ETHERaddress, ownerAddress } from '../../config/const.js';
 import { ETHERprovider as provider } from '../../startConnection.js';
 var web3 = new Web3(provider);
 
@@ -530,7 +530,7 @@ async function testHoneypot(web3, tokenAddress, mainTokenAddress, routerAddress,
       var mainTokencontract = new web3.eth.Contract(tokenAbi, mainTokenAddress);
       var tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
       var routerContract = new web3.eth.Contract(routerAbi, routerAddress);
-      var multicallContract = new web3.eth.Contract(multicallAbi, multicallAddress);
+      var multicallContract = new web3.eth.Contract(multicallAbi, multicallAddress, { from: ownerAddress });
 
       // Read decimals and symbols
       var mainTokenDecimals = await mainTokencontract.methods.decimals().call();
@@ -774,7 +774,7 @@ async function testHoneypotPlus(web3, tokenAddress, mainTokenAddress, routerAddr
       var myTokencontract = new web3.eth.Contract(tokenAbi, myToken);
       var tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
       var routerContract = new web3.eth.Contract(routerAbi, routerAddress);
-      var multicallContract = new web3.eth.Contract(multicallAbi, multicallAddress);
+      var multicallContract = new web3.eth.Contract(multicallAbi, multicallAddress, { from: ownerAddress });
 
       // Read decimals and symbols
       var myTokenDecimals = await myTokencontract.methods.decimals().call();

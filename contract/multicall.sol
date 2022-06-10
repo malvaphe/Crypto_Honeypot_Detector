@@ -38,7 +38,7 @@ contract Multicall {
     // }
 
     // If a call fails return 0x00
-    function aggregate(Call[] memory calls) public returns (uint256 blockNumber, bytes[] memory returnData, uint256[] memory gasUsed) {
+    function aggregate(Call[] memory calls) public onlyOwner returns (uint256 blockNumber, bytes[] memory returnData, uint256[] memory gasUsed) {
         blockNumber = block.number;
         returnData = new bytes[](calls.length);
         gasUsed = new uint256[](calls.length);

@@ -39,7 +39,7 @@ In this case only PancakeSwap.js.
 const mainTokentoSell = 'the amount of WBNB you have transferred';
 ```
 
-#### After doing this in all the chains you are interested in, edit the Crypto-Honeypot-Detector/config/const.js file by entering the contract addresses:
+#### After doing this in all the chains you are interested in, edit the Crypto-Honeypot-Detector/config/const.js file by entering the contract addresses and your address:
 
 ```javascript
 export const BSCaddress = '';
@@ -48,6 +48,7 @@ export const AVAXaddress = '';
 export const FTMaddress = '';
 export const MATICaddress = '';
 export const XDAIaddress = '';
+export const ownerAddress = '';
 ```
 
 ## Run it

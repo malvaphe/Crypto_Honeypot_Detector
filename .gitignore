@@ -1,2 +1,7 @@
 node_modules/
 package-lock.json
+webapp/server/node_modules/
+webapp/server/package-lock.json
+webapp/client/node_modules/
+webapp/client/package-lock.json
+webapp/client/dist

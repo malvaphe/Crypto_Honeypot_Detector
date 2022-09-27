@@ -1,5 +1,7 @@
 # Crypto Honeypot Detector
 
+![Crypto Honeypot Detector](preview.png)
+
 An honeypot detector for many chains. The project aims to identify crypto honeypots following these steps:
 
 - You must specify a dex.

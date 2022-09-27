@@ -1,6 +1,6 @@
 # Crypto Honeypot Detector
 
-![Crypto Honeypot Detector](preview.png)
+![Crypto Honeypot Detector](webapp.png)
 
 An honeypot detector for many chains. The project aims to identify crypto honeypots following these steps:
 

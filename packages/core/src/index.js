@@ -1,0 +1,10 @@
+export { createDetector, rpcUrlsFromEnv, TokenNotFoundError } from './detector.js';
+export { CHAINS, LEGACY_DEXES } from './chains.js';
+export { analyze, DEFAULT_THRESHOLDS } from './analyze.js';
+export { simulateWithContract } from './simulate-contract.js';
+export { simulateWithWallet, SimulateUnsupportedError } from './simulate-wallet.js';
+export { findPools, rankPools } from './discovery.js';
+export { getTokenMetadata, getTokenSecurityInfo } from './token-info.js';
+export { decodeRevert } from './errors.js';
+export { InputError, jsonReplacer } from './utils.js';
+export { simulatorArtifact } from './simulator-artifact.js';

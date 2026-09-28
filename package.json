@@ -1,18 +1,30 @@
 {
-  "name": "cryptohoneypotdetector",
-  "version": "1.0.0",
-  "main": "server.js",
+  "name": "crypto-honeypot-detector",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Honeypot detector for EVM chains: simulates buy, sell and transfer of a token without deploying contracts or holding funds.",
   "type": "module",
+  "workspaces": [
+    "packages/core",
+    "packages/server",
+    "packages/webapp"
+  ],
   "scripts": {
-    "start": "node server.js"
+    "build:contract": "npm run build:contract -w packages/core",
+    "start": "npm start -w packages/server",
+    "dev:webapp": "npm run dev -w packages/webapp",
+    "build:webapp": "npm run build -w packages/webapp",
+    "check": "node packages/core/src/cli.js",
+    "test": "npm test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
   },
-  "dependencies": {
-    "node-fetch": "^3.2.4",
-    "web3": "^1.7.3"
+  "engines": {
+    "node": ">=20"
   },
   "author": {
     "name": "malvaphe",
     "email": "malvaphe@gmail.com",
     "url": "https://github.com/malvaphe"
-  }
+  },
+  "license": "MIT"
 }

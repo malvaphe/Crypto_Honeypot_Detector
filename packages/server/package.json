@@ -1,0 +1,25 @@
+{
+  "name": "@honeypot-detector/server",
+  "version": "2.0.0",
+  "private": true,
+  "description": "REST API for Crypto Honeypot Detector (optionally serves the web app).",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test --test-concurrency=1 \"test/**/*.test.js\"",
+    "demo": "node scripts/demo.js"
+  },
+  "dependencies": {
+    "@honeypot-detector/core": "2.0.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

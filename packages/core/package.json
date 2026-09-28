@@ -1,0 +1,34 @@
+{
+  "name": "@honeypot-detector/core",
+  "version": "2.0.0",
+  "description": "Crypto honeypot detector for EVM chains (library + CLI). Simulates buy, sell and transfer through eth_call state overrides: no deployed contract, no funds required.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "honeypot-detector": "src/cli.js"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build:contract": "node scripts/build-contract.js",
+    "test": "node --test --test-concurrency=1 \"test/**/*.test.js\""
+  },
+  "dependencies": {
+    "viem": "^2.56.9"
+  },
+  "devDependencies": {
+    "@foundry-rs/anvil": "^1.7.1",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "@uniswap/v3-core": "^1.0.1",
+    "solc": "0.8.37"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

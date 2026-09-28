@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --color-honey-50: #fffbeb;
+  --color-honey-100: #fef3c7;
+  --color-honey-300: #fcd34d;
+  --color-honey-400: #fbbf24;
+  --color-honey-500: #f59e0b;
+  --color-honey-600: #d97706;
+  --color-honey-700: #b45309;
+}
+
+@layer base {
+  body {
+    @apply bg-stone-50 text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100;
+  }
+}
+
+@utility card {
+  @apply rounded-2xl border border-stone-200 bg-white p-5 shadow-sm dark:border-stone-800 dark:bg-stone-900;
+}
+
+@utility field {
+  @apply w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm outline-none transition focus:border-honey-500 focus:ring-2 focus:ring-honey-300/50 dark:border-stone-700 dark:bg-stone-950;
+}
+
+@utility label {
+  @apply mb-1 block text-sm font-medium text-stone-700 dark:text-stone-300;
+}

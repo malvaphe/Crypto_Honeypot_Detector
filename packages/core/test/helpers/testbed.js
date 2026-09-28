@@ -85,7 +85,8 @@ export async function startTestbed() {
     rpcUrls: { default: { http: [rpcUrl] } },
   });
   const account = privateKeyToAccount(DEV_KEY);
-  const publicClient = createPublicClient({ chain, transport: http(rpcUrl) });
+  // cacheTime: 0 -> getBlockNumber() always returns the latest block (tests mine blocks quickly)
+  const publicClient = createPublicClient({ chain, transport: http(rpcUrl), cacheTime: 0 });
   const wallet = createWalletClient({ chain, account, transport: http(rpcUrl) });
   const fx = loadFixtures();
 

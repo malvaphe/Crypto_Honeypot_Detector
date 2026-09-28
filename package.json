@@ -16,10 +16,11 @@
     "build:webapp": "npm run build -w packages/webapp",
     "check": "node packages/core/src/cli.js",
     "test": "npm test --workspaces --if-present",
-    "lint": "npm run lint --workspaces --if-present"
+    "lint": "npm run lint --workspaces --if-present",
+    "demo": "npm run build -w packages/webapp && npm run demo -w packages/server"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "author": {
     "name": "malvaphe",

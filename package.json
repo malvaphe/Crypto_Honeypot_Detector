@@ -27,5 +27,8 @@
     "email": "malvaphe@gmail.com",
     "url": "https://github.com/malvaphe"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "overrides": {
+    "tmp": "0.2.7"
+  }
 }
